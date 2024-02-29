@@ -1,24 +1,19 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QPixmap
 import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget
+from PyQt5 import uic
 
-class ImageWindow(QMainWindow):
-    def __init__(self):
+class MyTabWidget(QTabWidget):
+    def __init__(self, ui_file):
         super().__init__()
+        uic.loadUi(ui_file, self)
 
-        # Load an image file into a QPixmap
-        pixmap = QPixmap("path/to/your/image.jpg")
-
-        # Create a QLabel widget and set the pixmap as the image
-        label = QLabel(self)
-        label.setPixmap(pixmap)
-        label.setScaledContents(True)
-
-        # Set the QLabel as the central widget of the window
-        self.setCentralWidget(label)
-
-if __name__ == "__main__":
+def main():
     app = QApplication(sys.argv)
-    window = ImageWindow()
+    window = MyTabWidget("MainWindow.ui")
+    window.showFullScreen()                         # Show in full screen
+
     window.show()
     sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
