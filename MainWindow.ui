@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>3</number>
+   <number>4</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -724,7 +724,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_noiseBeforeEditing" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -1084,7 +1084,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_afterEditing" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_noiseAfterEditing" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -2966,7 +2966,7 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="btn_chooseImageHistogramRGB">
             <property name="text">
              <string>Choose Your Image</string>
             </property>
@@ -3042,7 +3042,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="label_beforeAddingNoise_14">
+               <widget class="QLabel" name="label_redHistogram">
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -3102,7 +3102,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="GraphicsLayoutWidget" name="image_beforeEditing_11" native="true">
+             <widget class="GraphicsLayoutWidget" name="image_redHistogram" native="true">
               <property name="minimumSize">
                <size>
                 <width>250</width>
@@ -3169,7 +3169,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="label_beforeAddingNoise_15">
+               <widget class="QLabel" name="label_greenHistogram">
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -3229,7 +3229,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="GraphicsLayoutWidget" name="image_beforeEditing_12" native="true">
+             <widget class="GraphicsLayoutWidget" name="image_greenHistogram" native="true">
               <property name="minimumSize">
                <size>
                 <width>250</width>
@@ -3296,7 +3296,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="label_beforeAddingNoise_16">
+               <widget class="QLabel" name="label_blueHistogram">
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -3356,7 +3356,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="GraphicsLayoutWidget" name="image_beforeEditing_13" native="true">
+             <widget class="GraphicsLayoutWidget" name="image_blueHistogram" native="true">
               <property name="minimumSize">
                <size>
                 <width>250</width>
