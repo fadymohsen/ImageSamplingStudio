@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1597</width>
+    <width>1616</width>
     <height>1093</height>
    </rect>
   </property>
@@ -14,7 +14,6 @@
    <font>
     <family>Georgia</family>
     <pointsize>10</pointsize>
-    <weight>75</weight>
     <bold>true</bold>
    </font>
   </property>
@@ -604,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>5</number>
+   <number>2</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -682,7 +681,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -762,7 +760,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <widget class="QLabel" name="label">
+               <widget class="QLabel" name="label_noiseType">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -779,7 +777,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -808,7 +805,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseTypes">
                 <property name="minimumSize">
                  <size>
-                  <width>110</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -822,7 +819,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -865,7 +861,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
-               <widget class="QLabel" name="label_3">
+               <widget class="QLabel" name="label_saltNoiseType">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -882,7 +878,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -911,7 +906,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QSlider" name="horizontalSlider">
+               <widget class="QSlider" name="slider_saltNoiseType">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -938,7 +933,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <widget class="QLabel" name="label_4">
+               <widget class="QLabel" name="label_pepperNoiseType">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -955,7 +950,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -984,7 +978,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QSlider" name="horizontalSlider_2">
+               <widget class="QSlider" name="slider_pepperNoiseType">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -1030,7 +1024,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_2">
+             <widget class="QLabel" name="label_afterAddingNoise">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -1047,7 +1041,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -1091,7 +1084,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_2" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_afterEditing" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -1127,7 +1120,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
-               <widget class="QLabel" name="label_2">
+               <widget class="QLabel" name="label_filter_Type">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1144,7 +1137,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1170,10 +1162,10 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_noiseTypes_2">
+               <widget class="QComboBox" name="comboBox_noiseFilters">
                 <property name="minimumSize">
                  <size>
-                  <width>110</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1187,7 +1179,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -1230,7 +1221,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_9">
               <item>
-               <widget class="QLabel" name="label_6">
+               <widget class="QLabel" name="label_saltNoiseFilter">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1247,7 +1238,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1276,7 +1266,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QSlider" name="horizontalSlider_4">
+               <widget class="QSlider" name="slider_saltNoiseFilter">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -1303,7 +1293,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_10">
               <item>
-               <widget class="QLabel" name="label_7">
+               <widget class="QLabel" name="label_pepperNoiseFilter">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1320,7 +1310,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1349,7 +1338,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QSlider" name="horizontalSlider_5">
+               <widget class="QSlider" name="slider_pepperNoiseFilter">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -1459,7 +1448,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_3">
+             <widget class="QLabel" name="label_beforeEdgeDetection">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -1476,7 +1465,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -1520,7 +1508,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_3" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_beforeEdgeDetection" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -1556,7 +1544,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_12">
               <item>
-               <widget class="QLabel" name="label_5">
+               <widget class="QLabel" name="label_maskTypes">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1573,7 +1561,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1602,7 +1589,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseTypes_3">
                 <property name="minimumSize">
                  <size>
-                  <width>110</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1616,7 +1603,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -1664,7 +1650,7 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_20">
               <item>
-               <widget class="QLabel" name="label_14">
+               <widget class="QLabel" name="label_edgeDirection">
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
@@ -1681,7 +1667,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>9</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -1710,7 +1695,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseTypes_6">
                 <property name="minimumSize">
                  <size>
-                  <width>110</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1724,7 +1709,6 @@ QTabBar::tab:selected {
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>50</weight>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -1797,7 +1781,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_4">
+             <widget class="QLabel" name="label_afterEdgeDetection">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -1814,7 +1798,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -1858,7 +1841,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_4" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_afterEdgeDetection" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -1894,68 +1877,13 @@ QTabBar::tab:selected {
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_21">
               <item>
-               <spacer name="horizontalSpacer_38">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton">
-                <property name="minimumSize">
-                 <size>
-                  <width>200</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>-1</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
+               <widget class="QLabel" name="label">
                 <property name="text">
-                 <string>Apply Your Edits</string>
+                 <string/>
                 </property>
                </widget>
               </item>
-              <item>
-               <spacer name="horizontalSpacer_37">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
              </layout>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_42">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Preferred</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>10</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </item>
@@ -2075,7 +2003,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2199,7 +2126,6 @@ QTabBar::tab:selected {
               <property name="font">
                <font>
                 <pointsize>-1</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2263,7 +2189,6 @@ QTabBar::tab:selected {
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2377,11 +2302,6 @@ QTabBar::tab:selected {
      </layout>
     </item>
    </layout>
-   <zorder>layoutWidget_3</zorder>
-   <zorder>horizontalSpacer_40</zorder>
-   <zorder>horizontalSpacer_40</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>horizontalSpacer_39</zorder>
   </widget>
   <widget class="QWidget" name="Equalize">
    <attribute name="title">
@@ -2436,7 +2356,6 @@ QTabBar::tab:selected {
            <font>
             <family>Georgia</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -2463,7 +2382,6 @@ QTabBar::tab:selected {
            <font>
             <family>Georgia</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -2496,7 +2414,6 @@ border-radius: 8px;
            <font>
             <family>Georgia</family>
             <pointsize>10</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -2582,7 +2499,6 @@ border-radius: 8px;
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2690,7 +2606,6 @@ border-radius: 8px;
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2802,7 +2717,6 @@ border-radius: 8px;
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -2910,7 +2824,6 @@ border-radius: 8px;
                <font>
                 <family>Georgia</family>
                 <pointsize>10</pointsize>
-                <weight>75</weight>
                 <bold>true</bold>
                </font>
               </property>
@@ -3146,7 +3059,6 @@ border-radius: 8px;
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -3274,7 +3186,6 @@ border-radius: 8px;
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -3402,7 +3313,6 @@ border-radius: 8px;
                  <font>
                   <family>Georgia</family>
                   <pointsize>10</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -3599,7 +3509,6 @@ border-radius: 8px;
                    <font>
                     <family>Georgia</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -3787,7 +3696,6 @@ border-radius: 8px;
                    <font>
                     <family>Georgia</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -3898,7 +3806,6 @@ border-radius: 8px;
                  <font>
                   <family>Georgia</family>
                   <pointsize>12</pointsize>
-                  <weight>75</weight>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -4023,7 +3930,6 @@ border-radius: 8px;
                    <font>
                     <family>Georgia</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4137,7 +4043,6 @@ border-radius: 8px;
                      <font>
                       <family>Georgia</family>
                       <pointsize>10</pointsize>
-                      <weight>75</weight>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -4194,7 +4099,6 @@ border-radius: 8px;
                     <height>300</height>
                    </size>
                   </property>
-                  <zorder>verticalSpacer_47</zorder>
                  </widget>
                 </item>
                </layout>
@@ -4252,7 +4156,6 @@ border-radius: 8px;
                    <font>
                     <family>Georgia</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
