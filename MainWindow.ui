@@ -604,7 +604,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>1</number>
+   <number>2</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -2003,9 +2003,9 @@ QTabBar::tab:selected {
    <attribute name="title">
     <string>Curves</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_17">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_12">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_16">
       <item>
        <spacer name="verticalSpacer_18">
         <property name="orientation">
@@ -2023,7 +2023,7 @@ QTabBar::tab:selected {
        </spacer>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <layout class="QHBoxLayout" name="horizontalLayout_31">
         <item>
          <spacer name="horizontalSpacer_18">
           <property name="orientation">
@@ -2041,9 +2041,9 @@ QTabBar::tab:selected {
          </spacer>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_13">
+         <layout class="QVBoxLayout" name="verticalLayout_11">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
             <item>
              <spacer name="horizontalSpacer_19">
               <property name="orientation">
@@ -2123,13 +2123,13 @@ QTabBar::tab:selected {
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>300</height>
+              <height>400</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>500</height>
+              <height>600</height>
              </size>
             </property>
            </widget>
@@ -2140,7 +2140,7 @@ QTabBar::tab:selected {
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
+             <enum>QSizePolicy::Preferred</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -2150,41 +2150,90 @@ QTabBar::tab:selected {
             </property>
            </spacer>
           </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_14">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_14">
+           <spacer name="horizontalSpacer_25">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Maximum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>300</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_22">
             <item>
-             <widget class="QLabel" name="label_9">
+             <spacer name="horizontalSpacer_39">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>-1</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
-               <string/>
+               <string>Choose Your Image</string>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_40">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
          </layout>
         </item>
         <item>
-         <spacer name="horizontalSpacer_25">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>200</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_15">
+         <layout class="QVBoxLayout" name="verticalLayout_13">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_17">
             <item>
-             <spacer name="horizontalSpacer_27">
+             <spacer name="horizontalSpacer_60">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -2197,7 +2246,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_6">
+             <widget class="QLabel" name="label_beforeAddingNoise_9">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2219,7 +2268,7 @@ QTabBar::tab:selected {
                </font>
               </property>
               <property name="text">
-               <string>Histogram</string>
+               <string>Histogram Curve</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2227,7 +2276,7 @@ QTabBar::tab:selected {
              </widget>
             </item>
             <item>
-             <spacer name="horizontalSpacer_30">
+             <spacer name="horizontalSpacer_61">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -2242,7 +2291,7 @@ QTabBar::tab:selected {
            </layout>
           </item>
           <item>
-           <spacer name="verticalSpacer_24">
+           <spacer name="verticalSpacer_41">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -2258,28 +2307,28 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_6" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_14" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
-              <height>300</height>
+              <height>400</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>500</height>
+              <height>600</height>
              </size>
             </property>
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer_25">
+           <spacer name="verticalSpacer_43">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
+             <enum>QSizePolicy::Preferred</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -2288,17 +2337,6 @@ QTabBar::tab:selected {
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_16">
-            <item>
-             <widget class="QLabel" name="label_10">
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
           </item>
          </layout>
         </item>
@@ -2339,6 +2377,11 @@ QTabBar::tab:selected {
      </layout>
     </item>
    </layout>
+   <zorder>layoutWidget_3</zorder>
+   <zorder>horizontalSpacer_40</zorder>
+   <zorder>horizontalSpacer_40</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>horizontalSpacer_39</zorder>
   </widget>
   <widget class="QWidget" name="Equalize">
    <attribute name="title">
