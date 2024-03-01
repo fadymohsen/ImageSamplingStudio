@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>4</number>
+   <number>5</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -3492,7 +3492,7 @@ border-radius: 8px;
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_beforeAddingNoise_10">
+                 <widget class="QLabel" name="label_originalImage">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -3552,7 +3552,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="GraphicsLayoutWidget" name="image_beforeEditing_15" native="true">
+               <widget class="GraphicsLayoutWidget" name="image_originalFrequencies" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>250</width>
@@ -3601,7 +3601,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="btn_highPassFilter">
                 <property name="text">
                  <string>High-Pass Filter</string>
                 </property>
@@ -3624,7 +3624,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_5">
+               <widget class="QPushButton" name="btn_lowPassFilter">
                 <property name="text">
                  <string>Low-Pass Filter</string>
                 </property>
@@ -3679,7 +3679,7 @@ border-radius: 8px;
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_beforeAddingNoise_11">
+                 <widget class="QLabel" name="label_filteredImage">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -3739,7 +3739,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="GraphicsLayoutWidget" name="image_beforeEditing_16" native="true">
+               <widget class="GraphicsLayoutWidget" name="image_filteredFrequencies" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>250</width>
@@ -3795,7 +3795,7 @@ border-radius: 8px;
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_8">
+               <widget class="QLabel" name="label_Hybrid">
                 <property name="minimumSize">
                  <size>
                   <width>100</width>
@@ -3870,7 +3870,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_7">
+               <widget class="QPushButton" name="btn_applyHybrid">
                 <property name="text">
                  <string>Apply</string>
                 </property>
@@ -3913,7 +3913,7 @@ border-radius: 8px;
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_beforeAddingNoise_18">
+                 <widget class="QLabel" name="label_lowPass">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -3973,7 +3973,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="GraphicsLayoutWidget" name="image_beforeEditing_18" native="true">
+               <widget class="GraphicsLayoutWidget" name="image_lowPass" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>470</width>
@@ -4026,7 +4026,7 @@ border-radius: 8px;
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QLabel" name="label_beforeAddingNoise_17">
+                   <widget class="QLabel" name="label_result">
                     <property name="minimumSize">
                      <size>
                       <width>200</width>
@@ -4086,7 +4086,7 @@ border-radius: 8px;
                  </spacer>
                 </item>
                 <item>
-                 <widget class="GraphicsLayoutWidget" name="image_beforeEditing_17" native="true">
+                 <widget class="GraphicsLayoutWidget" name="image_result" native="true">
                   <property name="minimumSize">
                    <size>
                     <width>470</width>
@@ -4139,7 +4139,7 @@ border-radius: 8px;
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label_beforeAddingNoise_19">
+                 <widget class="QLabel" name="label_highPass">
                   <property name="minimumSize">
                    <size>
                     <width>200</width>
@@ -4199,7 +4199,7 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="GraphicsLayoutWidget" name="image_beforeEditing_19" native="true">
+               <widget class="GraphicsLayoutWidget" name="image_highPass" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>470</width>
