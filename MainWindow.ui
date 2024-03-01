@@ -1986,7 +1986,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_5">
+             <widget class="QLabel" name="label_distributionCurve">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2046,7 +2046,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_5" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_distributionCurve" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -2116,7 +2116,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_2">
+             <widget class="QPushButton" name="btn_chooseImageCurves">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2172,7 +2172,7 @@ QTabBar::tab:selected {
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_9">
+             <widget class="QLabel" name="label_histogramCurve">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2232,7 +2232,7 @@ QTabBar::tab:selected {
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_14" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_histogramCurve" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
