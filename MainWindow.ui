@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>3</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -2345,7 +2345,7 @@ QTabBar::tab:selected {
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_11">
+         <widget class="QLabel" name="label_chooseOperation">
           <property name="maximumSize">
            <size>
             <width>200</width>
@@ -2365,7 +2365,7 @@ QTabBar::tab:selected {
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="radioButton_normalization">
           <property name="minimumSize">
            <size>
             <width>170</width>
@@ -2397,7 +2397,7 @@ border-radius: 8px;
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="radioButton_equalization">
           <property name="minimumSize">
            <size>
             <width>170</width>
@@ -2482,7 +2482,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_7">
+             <widget class="QLabel" name="label_beforeOperation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2542,7 +2542,7 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_7" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_beforeOperation" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -2589,7 +2589,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_12">
+             <widget class="QLabel" name="label_histogramBeforeOperation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2649,7 +2649,7 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_9" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_histogramBeforeOperation" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -2700,7 +2700,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_8">
+             <widget class="QLabel" name="label_afterOperation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2760,7 +2760,7 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_8" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_afterOperation" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -2807,7 +2807,7 @@ border-radius: 8px;
              </spacer>
             </item>
             <item>
-             <widget class="QLabel" name="label_beforeAddingNoise_13">
+             <widget class="QLabel" name="label_histogramAfterOperation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -2867,7 +2867,7 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="GraphicsLayoutWidget" name="image_beforeEditing_10" native="true">
+           <widget class="GraphicsLayoutWidget" name="image_histogramAfterOperation" native="true">
             <property name="minimumSize">
              <size>
               <width>250</width>
