@@ -27,9 +27,14 @@ class MyTabWidget(QTabWidget):
     
     def handleObjects(self):
         self.slider_adjustFrequency.valueChanged.connect(self.updateFrequencyValue)
+        self.slider_adjustTValue.valueChanged.connect(self.updateTValue)
+
 
     def updateFrequencyValue(self, value):
         self.label_frequencyValue.setText('Cut-off Frequency: {} Hz'.format(value))
+
+    def updateTValue(self, value):
+        self.label_valueOfT.setText('T-Value: {}'.format(value))
 
 
 
