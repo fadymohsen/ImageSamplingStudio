@@ -604,7 +604,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>5</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -3487,9 +3487,9 @@ border-radius: 8px;
    <attribute name="title">
     <string>Frequency</string>
    </attribute>
-   <layout class="QVBoxLayout" name="verticalLayout_12">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_35">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_12">
       <item>
        <spacer name="verticalSpacer_56">
         <property name="orientation">
@@ -3796,11 +3796,41 @@ border-radius: 8px;
                </spacer>
               </item>
               <item>
-               <widget class="QSlider" name="slider_adjustFrequency">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
+               <layout class="QHBoxLayout" name="horizontalLayout_44">
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QSlider" name="slider_adjustFrequency">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_25">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
               <item>
                <spacer name="verticalSpacer_58">
@@ -4456,7 +4486,7 @@ border-radius: 8px;
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>17</width>
+          <width>1583</width>
           <height>13</height>
          </size>
         </property>
