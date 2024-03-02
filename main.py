@@ -12,6 +12,7 @@ class MyTabWidget(QTabWidget):
     def __init__(self, ui_file):
         super().__init__()
         uic.loadUi(ui_file, self)
+        self.handleObjects()
 
     def keyPressEvent(self, event):
         if event.key() == 16777216:  # Integer value for Qt.Key_Escape
@@ -22,6 +23,12 @@ class MyTabWidget(QTabWidget):
         else:
             super().keyPressEvent(event)
 
+
+    def handleObjects(self):
+        self.slider_adjustFrequency.valueChanged.connect(self.updateFrequencyValue)
+
+    def updateFrequencyValue(self, value):
+        self.label_frequencyValue.setText('Cut-off Frequency: {} Hz'.format(value))
 
 
 
