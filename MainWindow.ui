@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>5</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -1586,7 +1586,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_noiseTypes_3">
+               <widget class="QComboBox" name="comboBox_edgeMaskType">
                 <property name="minimumSize">
                  <size>
                   <width>116</width>
@@ -1692,7 +1692,7 @@ QTabBar::tab:selected {
                </spacer>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_noiseTypes_6">
+               <widget class="QComboBox" name="comboBox_edgeMaskDirection">
                 <property name="minimumSize">
                  <size>
                   <width>116</width>

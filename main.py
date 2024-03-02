@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget
 from PyQt5 import uic
-
+import cv2
 
 
 
@@ -14,6 +14,7 @@ class MyTabWidget(QTabWidget):
         uic.loadUi(ui_file, self)
         self.handleObjects()
 
+
     def keyPressEvent(self, event):
         if event.key() == 16777216:  # Integer value for Qt.Key_Escape
             if self.isFullScreen():
@@ -22,8 +23,8 @@ class MyTabWidget(QTabWidget):
                 self.showFullScreen()  # Show in full screen
         else:
             super().keyPressEvent(event)
-
-
+    
+    
     def handleObjects(self):
         self.slider_adjustFrequency.valueChanged.connect(self.updateFrequencyValue)
 
