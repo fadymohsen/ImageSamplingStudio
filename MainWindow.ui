@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1719</width>
-    <height>1093</height>
+    <height>1097</height>
    </rect>
   </property>
   <property name="font">
@@ -4436,6 +4436,12 @@ border-radius: 8px;
                 </item>
                 <item>
                  <widget class="QSlider" name="slider_adjustFrequency">
+                  <property name="minimum">
+                   <number>5</number>
+                  </property>
+                  <property name="maximum">
+                   <number>200</number>
+                  </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
