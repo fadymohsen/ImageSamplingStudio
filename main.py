@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import curves
 import EdgeDetection
+from Noise import noiseAddition
 
 
 
@@ -28,6 +29,7 @@ class MyTabWidget(QTabWidget):
         self.img_data_low_pass = None
         self.img_data_high_pass  = None
         self.counter = 0
+        self.noiseAdd = noiseAddition(self)
 
 
     def keyPressEvent(self, event):
@@ -42,6 +44,7 @@ class MyTabWidget(QTabWidget):
     
     def handleObjects(self):
         self.btn_chooseImageCurves_2.clicked.connect(self.open_image)
+        self.btn_chooseImageNoise_2.clicked.connect(lambda: self.noiseAdd.Browse())
         self.slider_adjustFrequency.valueChanged.connect(self.updateFrequencyValue)
         self.slider_adjustTValue.valueChanged.connect(self.updateTValue)
         self.radioButton_highPass.clicked.connect(
