@@ -81,7 +81,7 @@ class MyTabWidget(QTabWidget):
     def open_image(self):
         options = QFileDialog.Options()
         fileName, _ = QFileDialog.getOpenFileName(self, "Select Image", "",
-                                                  "Image Files (*.png *.jpg *.jpeg *.bmp *.gif)",
+                                                  "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
                                                   options=options)
         imageEdgeDetection = cv2.imread(fileName)
         imageEdgeDetection = cv2.rotate(imageEdgeDetection, cv2.ROTATE_90_CLOCKWISE)
