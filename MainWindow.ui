@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>4</number>
   </property>
   <widget class="QWidget" name="tab">
    <attribute name="title">
@@ -821,7 +821,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseTypes">
                 <property name="minimumSize">
                  <size>
-                  <width>98</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1108,7 +1108,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseFilters">
                 <property name="minimumSize">
                  <size>
-                  <width>98</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1404,7 +1404,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_edgeMaskType">
                 <property name="minimumSize">
                  <size>
-                  <width>98</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1510,7 +1510,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_edgeMaskDirection">
                 <property name="minimumSize">
                  <size>
-                  <width>98</width>
+                  <width>116</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -2961,6 +2961,9 @@ border-radius: 8px;
             <height>16777215</height>
            </size>
           </property>
+          <property name="maximum">
+           <number>255</number>
+          </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -3370,9 +3373,44 @@ border-radius: 8px;
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="btn_chooseImageHistogramRGB">
+           <widget class="QLabel" name="label_histType">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>Choose Your Image</string>
+             <string>Choose Type:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_normalHistogram">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Normal Histogram</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_cumulative">
+            <property name="font">
+             <font>
+              <family>Georgia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Cumulative Distribution</string>
             </property>
            </widget>
           </item>
