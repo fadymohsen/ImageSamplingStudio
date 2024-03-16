@@ -10,6 +10,8 @@ import numpy as np
 import curves
 import EdgeDetection
 from Noise import noiseAddition
+import Thresholding 
+import RGBHistogram
 
 
 
@@ -65,6 +67,13 @@ class MyTabWidget(QTabWidget):
         self.btn_applyHybrid.clicked.connect(lambda:self.mix_images(self.img_data_low_pass,self.img_data_high_pass))
         self.comboBox_edgeMaskType.currentIndexChanged.connect(self.on_edgeMaskType_change)
         self.comboBox_edgeMaskDirection.currentIndexChanged.connect(self.on_edgeMaskDirection_change)
+        self.slider_adjustTValue.setRange(0, 255)  
+        self.slider_adjustTValue.setValue(127)  
+        self.slider_adjustTValue.valueChanged.connect(self.updateThreshold)
+        
+        self.radioButton_normalHistogram.toggled.connect(lambda:self.drawHistograms(self.imageEdgeDetection))
+        self.radioButton_cumulative.toggled.connect(lambda:self.drawHistograms(self.imageEdgeDetection))
+        
 
     def updateFrequencyValue(self, value):
         self.label_frequencyValue.setText('Cut-off Frequency: {} Hz'.format(value))
@@ -83,11 +92,14 @@ class MyTabWidget(QTabWidget):
         fileName, _ = QFileDialog.getOpenFileName(self, "Select Image", "",
                                                   "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
                                                   options=options)
-        imageEdgeDetection = cv2.imread(fileName)
-        imageEdgeDetection = cv2.rotate(imageEdgeDetection, cv2.ROTATE_90_CLOCKWISE)
+        self.imageEdgeDetection = cv2.imread(fileName)
+        self.imageEdgeDetection = cv2.rotate(self.imageEdgeDetection, cv2.ROTATE_90_CLOCKWISE)
+        self.displayImagesThreshold()
+        self.drawHistograms(self.imageEdgeDetection)
+        
         self.image_data = cv2.imread(fileName, 0)
         self.read_image(self.image_beforeEdgeDetection, self.image_data)
-        self.grayScaleImage = cv2.cvtColor(imageEdgeDetection, cv2.COLOR_BGR2GRAY)
+        self.grayScaleImage = cv2.cvtColor(self.imageEdgeDetection, cv2.COLOR_BGR2GRAY)
         histogramCurve, distributionCurve = curves.drawCurves(self.image_data)
 
         view = self.image_histogramCurve.addViewBox()
@@ -165,6 +177,81 @@ class MyTabWidget(QTabWidget):
         view = self.image_afterEdgeDetection.addViewBox()
         view.addItem(edgeDetectedImage)
 
+    def drawHistograms(self,image):
+
+        histogram_r,histogram_g,histogram_b,cdf_r,cdf_g,cdf_b = RGBHistogram.drawRGBHistograms(image)
+        
+        if self.radioButton_normalHistogram.isChecked():
+            
+            # Plot histograms in respective PlotWidget objects
+            RGBHistogram.plotHistogram(histogram_r, 'red', self.image_redHistogram)
+            RGBHistogram.plotHistogram(histogram_g, 'green', self.image_greenHistogram)
+            RGBHistogram.plotHistogram(histogram_b, 'blue', self.image_blueHistogram)
+            
+
+        elif self.radioButton_cumulative.isChecked(): 
+            
+            # Plot cumulative functions
+            RGBHistogram.plotCumulative(cdf_r, 'r', self.image_redHistogram)
+            RGBHistogram.plotCumulative(cdf_g, 'g', self.image_greenHistogram)
+            RGBHistogram.plotCumulative(cdf_b, 'b', self.image_blueHistogram)
+            
+        else:
+            
+            # Neither radio button is checked
+            self.image_redHistogram.clear()
+            self.image_greenHistogram.clear()
+            self.image_blueHistogram.clear()
+            pass    
+
+    
+    
+    def updateThreshold(self, value):
+
+        # Convert image to grayscale if it's not already
+        if len(self.imageEdgeDetection.shape) == 3:
+            gray_image = cv2.cvtColor(self.imageEdgeDetection, cv2.COLOR_RGB2GRAY)
+        else:
+            gray_image = self.imageEdgeDetection
+
+
+        self.global_threshold = Thresholding.GlobalThresholding(value,gray_image)
+
+        # Local thresholding
+        block_size = 39
+        self.local_threshold = Thresholding.adaptive_thresholdGaussian(gray_image, block_size, value/255)
+        self.displayImagesThreshold()
+
+
+
+    def displayImagesThreshold(self):
+
+        self.image_beforeThresholding.clear()
+        ImageBeforeThresholding = pg.ImageItem(self.grayScaleImage)
+        BeforeThresholding = self.image_beforeThresholding.addViewBox()
+        BeforeThresholding.addItem(ImageBeforeThresholding)
+
+        
+        if self.radioButton_globalThresholding.isChecked():
+            # Perform global thresholding
+            self.image_afterThresholding.clear()
+            ImageAfterThresholding = pg.ImageItem(self.global_threshold)
+            AfterThresholding = self.image_afterThresholding.addViewBox()
+            AfterThresholding.addItem(ImageAfterThresholding)
+            pass
+
+        elif self.radioButton_localThresholding.isChecked():
+            # Perform local thresholding
+            self.image_afterThresholding.clear()
+            ImageAfterThresholding = pg.ImageItem(self.local_threshold)
+            AfterThresholding = self.image_afterThresholding.addViewBox()
+            AfterThresholding.addItem(ImageAfterThresholding)    
+            pass
+
+        else:
+            # Neither radio button is checked
+            self.image_afterThresholding.clear()
+            pass
 
 
 def main():
