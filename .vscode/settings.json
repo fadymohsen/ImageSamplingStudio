@@ -1,11 +1,21 @@
 {
     "python.analysis.typeCheckingMode": "basic",
     "cSpell.words": [
+        "astype",
         "butterworth",
+        "dtype",
+        "fftshift",
+        "fillvalue",
         "hyprid",
+        "ifft",
+        "ifftshift",
         "imread",
+        "kernal",
+        "meshgrid",
+        "ndim",
         "prewitt",
         "pyqtgraph",
-        "sobel"
+        "sobel",
+        "Thresholding"
     ]
 }
