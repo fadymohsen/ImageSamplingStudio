@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QApplication, QTabWidget, QFileDialog
 from PyQt5 import uic
 import cv2
 import pyqtgraph as pg
-from frequency_domain_filters import apply_convolution, ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
+from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
 import matplotlib.pyplot as plt
 import numpy as np
 import curves
@@ -15,10 +15,26 @@ import RGBHistogram
 
 
 
+
+
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 class MyTabWidget(QTabWidget):
     def __init__(self, ui_file):
         super().__init__()
         uic.loadUi(ui_file, self)
+        self.selected_image_path = None
+        self.pushButton_browseImage.clicked.connect(self.browse_image)
+
+        # START - To be Edited
         self.edgeDetectionDirection = "Horizontal"
         self.currentTypeIndex = 0
         self.handleObjects()
@@ -32,12 +48,15 @@ class MyTabWidget(QTabWidget):
         self.img_data_high_pass  = None
         self.counter = 0
         self.noiseAdd = noiseAddition(self)
-        self.selected_image_path = None  # Class attribute to store the selected image path
+        # END - To be Edited
 
-        # Link the button to the browse_image function
-        self.pushButton_browseImage.clicked.connect(self.browse_image)
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
 
     def browse_image(self):
+        """
+        Importing the MAIN Image in the first Tab Widget to be imported in the following Tab Widgets.
+        """
         options = QFileDialog.Options()
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Image", "",
                                                 "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
@@ -46,26 +65,33 @@ class MyTabWidget(QTabWidget):
             self.selected_image_path = file_name
             self.display_image_on_graphics_layout(file_name)
 
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+
     def display_image_on_graphics_layout(self, image_path):
+        """
+        Displays a grayscale image on the GraphicsLayoutWidget after rotating it by 90 degrees counterclockwise.
+        Args:
+            image_path (str): The file path of the image to be displayed.
+        This function reads the image from the specified path, converts it to grayscale.
+        Rotates it by 90 degrees counterclockwise,
+        and then displays it on the GraphicsLayoutWidget. The view is adjusted to fit the image.
+        """
         image_data = cv2.imread(image_path)
-        image_data = cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB)  # Convert to RGB for correct color representation
-
-        # Rotate the image data by 90 degrees counterclockwise
+        image_data = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
         image_data = np.rot90(image_data, -1)
-
         # Clear the previous image if any
         self.graphicsLayoutWidget_displayImagesMain.clear()
-
         # Create a PlotItem or ViewBox
         view_box = self.graphicsLayoutWidget_displayImagesMain.addViewBox()
-
         # Create an ImageItem and add it to the ViewBox
         image_item = pg.ImageItem(image_data)
         view_box.addItem(image_item)
-
         # Optional: Adjust the view to fit the image
         view_box.autoRange()
 
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
 
     def keyPressEvent(self, event):
         if event.key() == 16777216:         # Integer value for Qt.Key_Escape
@@ -76,6 +102,9 @@ class MyTabWidget(QTabWidget):
         else:
             super().keyPressEvent(event)
     
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+
     
     def handleObjects(self):
         self.btn_chooseImageCurves_2.clicked.connect(self.open_image)
