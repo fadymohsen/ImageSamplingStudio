@@ -17,7 +17,7 @@ from scipy import signal
 
 
 
-class noiseAddition():
+class noiseAdditionFiltration():
     def __init__(self, main_tab_widget):
         self.main_tab_widget = main_tab_widget
         self.ui = self.main_tab_widget

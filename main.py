@@ -4,14 +4,16 @@ from PyQt5.QtWidgets import QApplication, QTabWidget, QFileDialog
 from PyQt5 import uic
 import cv2
 import pyqtgraph as pg
-from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
 import numpy as np
+
+# Noise / Filtering
+from NoiseFilter import noiseAdditionFiltration
+
 import curves
 import EdgeDetection
-from Noise import noiseAddition
 import Thresholding 
 import RGBHistogram
-
+from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
 
 
 
@@ -33,11 +35,8 @@ class MyTabWidget(QTabWidget):
         self.selected_image_path = None
         self.pushButton_browseImage.clicked.connect(self.browse_image)
 
-        # Pass the instance of MyTabWidget (self) to the noiseAddition class
-        self.noiseAdd = noiseAddition(self)
-
-        # Noise & Filtering
-        self.noiseAdd = noiseAddition(self)
+        # NOISE-FILTERING
+        self.noiseAdd = noiseAdditionFiltration(self)
         self.filter_types = {"Ideal":ideal_filter, "Butterworth":butterworth_filter, "Gaussian":gaussian_filter}
 
 
