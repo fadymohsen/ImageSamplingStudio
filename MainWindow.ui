@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="tab_6">
    <attribute name="title">
@@ -910,7 +910,7 @@ QTabBar::tab:selected {
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -1022,12 +1022,15 @@ QTabBar::tab:selected {
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>9</pointsize>
+                  <pointsize>14</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
                  <string>Choose Noise Type</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -1064,7 +1067,7 @@ QTabBar::tab:selected {
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>10</pointsize>
+                  <pointsize>14</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>
@@ -1109,59 +1112,23 @@ QTabBar::tab:selected {
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_43">
-          <item>
-           <spacer name="horizontalSpacer_41">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="btn_chooseImageNoise_2">
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>-1</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Choose Your Image</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_42">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
+         <spacer name="horizontalSpacer_97">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_43"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1197,7 +1164,7 @@ QTabBar::tab:selected {
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -1309,12 +1276,15 @@ QTabBar::tab:selected {
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>9</pointsize>
+                  <pointsize>14</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
                 <property name="text">
                  <string>Choose Filter Type</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -1351,7 +1321,7 @@ QTabBar::tab:selected {
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>10</pointsize>
+                  <pointsize>14</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
                  </font>

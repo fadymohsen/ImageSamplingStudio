@@ -2,58 +2,51 @@ import cv2
 import numpy as np
 import pyqtgraph as pg
 from scipy import signal
-from pyqtgraph import ImageView
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QFileDialog
-from PyQt5 import uic
+
+
+
+
+
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 class noiseAddition():
-    def __init__(self, ui):
-        self.ui = ui
-        self.original_img_item = None
-        self.original_image = None
-        self.noiseType = None
-
+    def __init__(self, main_tab_widget):
+        self.main_tab_widget = main_tab_widget
+        self.ui = self.main_tab_widget
         self.ui.comboBox_noiseTypes.activated.connect(self.applyNoise)
         self.ui.comboBox_noiseFilters.activated.connect(self.applyFilter)
         self.applyNoise()
 
-
-    def Browse(self):
-        options = QFileDialog.Options()
-        fileName, _ = QFileDialog.getOpenFileName(self.ui, "Select Image", "",
-                                                "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
-                                                options=options)
-        if fileName:  # Check if a file was selected
-            imageArray = cv2.imread(fileName)  
-
-            if imageArray.ndim == 3:  
-                imageArray = cv2.cvtColor(imageArray, cv2.COLOR_BGR2GRAY)
-
-            # Rotate the image
-            imageArray = cv2.rotate(imageArray, cv2.ROTATE_90_CLOCKWISE)
-            
-            # Clear existing image
-            self.ui.image_noiseBeforeEditing.clear()
-            
-            # Display the original image
-            self.original_img_item = pg.ImageItem(imageArray)
-            original_view = self.ui.image_noiseBeforeEditing.addViewBox()
-            original_view.addItem(self.original_img_item)
-            self.original_image = imageArray
-
-
     def applyNoise(self):
-        if self.original_image is not None:
+        if self.main_tab_widget.selected_image_path:
+            imageArray = cv2.imread(self.main_tab_widget.selected_image_path)
+            if imageArray.ndim == 3:
+                imageArray = cv2.cvtColor(imageArray, cv2.COLOR_BGR2GRAY)
+            imageArray = cv2.rotate(imageArray, cv2.ROTATE_90_CLOCKWISE)
+            self.ui.image_noiseBeforeEditing.clear()
+            original_img_item = pg.ImageItem(imageArray)
+            original_view = self.ui.image_noiseBeforeEditing.addViewBox()
+            original_view.addItem(original_img_item)
+            self.original_image = imageArray
+            
             selected_noise = self.ui.comboBox_noiseTypes.currentText()
             if selected_noise == "Uniform Noise":
                 self.noisy_image = self.noiseAddition(selected_noise, self.original_image)
-                self.updateDisplay(self.noisy_image, is_noisy_image=True)  # Display noisy image on image_noiseAfterEditing
+                self.updateDisplay(self.noisy_image, is_noisy_image=True)
             elif selected_noise == "Gaussian Noise":
                 self.noisy_image = self.noiseAddition(selected_noise, self.original_image)
-                self.updateDisplay(self.noisy_image, is_noisy_image=True)  # Display noisy image on image_noiseAfterEditing
+                self.updateDisplay(self.noisy_image, is_noisy_image=True)
             elif selected_noise == "Salt & Pepper Noise":
                 self.noisy_image = self.noiseAddition(selected_noise, self.original_image)
-                self.updateDisplay(self.noisy_image, is_noisy_image=True)  # Display noisy image on image_noiseAfterEditing
+                self.updateDisplay(self.noisy_image, is_noisy_image=True)# Display noisy image on image_noiseAfterEditing
             
             
 

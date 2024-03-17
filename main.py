@@ -5,7 +5,6 @@ from PyQt5 import uic
 import cv2
 import pyqtgraph as pg
 from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
-import matplotlib.pyplot as plt
 import numpy as np
 import curves
 import EdgeDetection
@@ -34,21 +33,27 @@ class MyTabWidget(QTabWidget):
         self.selected_image_path = None
         self.pushButton_browseImage.clicked.connect(self.browse_image)
 
+        # Pass the instance of MyTabWidget (self) to the noiseAddition class
+        self.noiseAdd = noiseAddition(self)
+
+        # Noise & Filtering
+        self.noiseAdd = noiseAddition(self)
+        self.filter_types = {"Ideal":ideal_filter, "Butterworth":butterworth_filter, "Gaussian":gaussian_filter}
+
+
         # START - To be Edited
+        """
         self.edgeDetectionDirection = "Horizontal"
         self.currentTypeIndex = 0
         self.handleObjects()
-        self.image_data = None
         self.vb = None
-        self.filter_types = {"Ideal":ideal_filter,
-        "Butterworth":butterworth_filter,
-        "Gaussian":gaussian_filter}
         self.image_mixed = False
         self.img_data_low_pass = None
         self.img_data_high_pass  = None
         self.counter = 0
-        self.noiseAdd = noiseAddition(self)
+        """
         # END - To be Edited
+        
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
@@ -64,6 +69,8 @@ class MyTabWidget(QTabWidget):
         if file_name:
             self.selected_image_path = file_name
             self.display_image_on_graphics_layout(file_name)
+            # Apply in Noise/Filtering
+            self.noiseAdd.applyNoise()
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
@@ -105,10 +112,10 @@ class MyTabWidget(QTabWidget):
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
 
-    
+    """
     def handleObjects(self):
         self.btn_chooseImageCurves_2.clicked.connect(self.open_image)
-        self.btn_chooseImageNoise_2.clicked.connect(lambda: self.noiseAdd.Browse())
+        #self.btn_chooseImageNoise_2.clicked.connect(lambda: self.noiseAdd.Browse())
         self.slider_adjustFrequency.valueChanged.connect(self.updateFrequencyValue)
         self.slider_adjustTValue.valueChanged.connect(self.updateTValue)
         self.radioButton_highPass.clicked.connect(
@@ -314,6 +321,8 @@ class MyTabWidget(QTabWidget):
             # Neither radio button is checked
             self.image_afterThresholding.clear()
             pass
+"""
+    
 
 
 def main():
