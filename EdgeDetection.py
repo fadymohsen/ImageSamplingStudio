@@ -50,7 +50,7 @@ class EdgeDetector:
                 self.ui.comboBox_edgeMaskDirection.show()
                 self.ui.label_edgeDirection.show()
                 edges_image = self.prewittEdgeDetection(imageArray, selected_direction)
-            elif selected_mask_type == "Robert":
+            elif selected_mask_type == "Roberts":
                 self.ui.comboBox_edgeMaskDirection.show()
                 self.ui.label_edgeDirection.show()
                 edges_image = self.robertEdgeDetection(imageArray, selected_direction)
@@ -89,7 +89,6 @@ class EdgeDetector:
 # -----------------------------------------------------------------------------------------------------------------
 
     def sobelEdgeDetection(self, image, direction):
-        print("sobelEdgeDetection Is Selected")
         if direction == "Vertical":
             sobelFilter = np.array([[-1, 0, 1],
                                     [-2, 0, 2],
@@ -106,7 +105,6 @@ class EdgeDetector:
 # -----------------------------------------------------------------------------------------------------------------
 
     def prewittEdgeDetection(self, image, direction):
-        print("prewittEdgeDetection Is Selected")
         if direction == "Vertical":
             prewittFilter = np.array([[-1, 0, 1],
                                     [-1, 0, 1],
@@ -122,7 +120,6 @@ class EdgeDetector:
 # -----------------------------------------------------------------------------------------------------------------
 
     def robertEdgeDetection(self, image, direction):
-        print("robertEdgeDetection Is Selected")
         if direction == "Vertical":
             robertFilter = np.array([[1, 0],
                                     [0, -1]])
@@ -136,7 +133,6 @@ class EdgeDetector:
 # -----------------------------------------------------------------------------------------------------------------
 
     def cannyEdgeDetection(self, image):
-        print("CannyEdgeDetection Is Selected")
         blurred_img = cv2.GaussianBlur(image, (5, 5), 4)
 
         sobelFilterVertical = np.array([[-1, 0, 1],
