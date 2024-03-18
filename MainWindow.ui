@@ -2354,7 +2354,7 @@ QTabBar::tab:selected {
          </spacer>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="eq_normal_combobox">
           <property name="font">
            <font>
             <family>Georgia</family>
