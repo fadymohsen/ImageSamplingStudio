@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>5</number>
+   <number>7</number>
   </property>
   <widget class="QWidget" name="tab_6">
    <attribute name="title">
@@ -3906,7 +3906,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>18</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -3990,6 +3990,9 @@ border-radius: 8px;
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
@@ -4018,7 +4021,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4028,11 +4031,27 @@ border-radius: 8px;
                  </widget>
                 </item>
                 <item>
+                 <spacer name="horizontalSpacer_43">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
                  <widget class="QRadioButton" name="radioButton_highPass">
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4048,11 +4067,27 @@ border-radius: 8px;
                  </widget>
                 </item>
                 <item>
+                 <spacer name="horizontalSpacer_44">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
                  <widget class="QRadioButton" name="radioButton_lowPass">
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4118,7 +4153,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4132,7 +4167,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
                    </font>
@@ -4190,7 +4225,7 @@ border-radius: 8px;
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>10</pointsize>
+                  <pointsize>16</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -4262,42 +4297,12 @@ border-radius: 8px;
                </layout>
               </item>
               <item>
-               <spacer name="verticalSpacer_58">
+               <spacer name="verticalSpacer_52">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
                 <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_frequencyValue">
-                <property name="font">
-                 <font>
-                  <family>Georgia</family>
-                  <pointsize>10</pointsize>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_52">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+                 <enum>QSizePolicy::Preferred</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
@@ -4359,7 +4364,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>18</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4427,10 +4432,13 @@ border-radius: 8px;
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>40</height>
+              <height>80</height>
              </size>
             </property>
            </spacer>
@@ -4469,7 +4477,7 @@ border-radius: 8px;
                 <property name="font">
                  <font>
                   <family>Georgia</family>
-                  <pointsize>12</pointsize>
+                  <pointsize>16</pointsize>
                   <bold>true</bold>
                  </font>
                 </property>
@@ -4593,7 +4601,7 @@ border-radius: 8px;
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4619,22 +4627,6 @@ border-radius: 8px;
                  </spacer>
                 </item>
                </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_65">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>5</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_52">
@@ -4758,7 +4750,7 @@ color:#0074D9;</string>
                     <property name="font">
                      <font>
                       <family>Georgia</family>
-                      <pointsize>10</pointsize>
+                      <pointsize>16</pointsize>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -4784,22 +4776,6 @@ color:#0074D9;</string>
                    </spacer>
                   </item>
                  </layout>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_47">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
                 </item>
                 <item>
                  <widget class="GraphicsLayoutWidget" name="image_result" native="true">
@@ -4871,7 +4847,7 @@ color:#0074D9;</string>
                   <property name="font">
                    <font>
                     <family>Georgia</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>16</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -4897,22 +4873,6 @@ color:#0074D9;</string>
                  </spacer>
                 </item>
                </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_66">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>5</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_53">
