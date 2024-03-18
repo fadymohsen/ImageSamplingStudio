@@ -96,7 +96,7 @@ def cannyEdgeDetection(image):
                 r = Gradient[i+1, j+1]
                 q = Gradient[i-1, j-1]
 
-            #Checking wether the current pixel is larger than its adjacents or not
+            #Checking wether the current pixel is larger than its adjacent or not
             if (Gradient[i,j] >= q) and (Gradient[i,j] >= r):
                 Z[i,j] = Gradient[i,j]
             else:
@@ -104,7 +104,7 @@ def cannyEdgeDetection(image):
     thinEdgesImage = Z
 
 
-    #Double Thresholding and Hystresis to determine wether the pixel is strong, weak or non-edge
+    #Double Thresholding and Hysteresis to determine wether the pixel is strong, weak or non-edge
                 
     lowThresholdRatio=0.05
     highThresholdRatio=0.09
@@ -126,7 +126,7 @@ def cannyEdgeDetection(image):
     thresholdedImage[weak_i, weak_j] = weak
 
 
-    #Hystresis process to detemrine whether the weak edges are considered edges or non-edges
+    #Hysteresis process to determine whether the weak edges are considered edges or non-edges
     for i in range(1, M-1):
         for j in range(1, N-1):
             if (thresholdedImage[i, j] == weak):
