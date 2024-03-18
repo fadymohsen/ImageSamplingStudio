@@ -43,13 +43,27 @@ class EdgeDetector:
             selected_direction = self.ui.comboBox_edgeMaskDirection.currentText()
 
             if selected_mask_type == "Sobel":
+                self.ui.comboBox_edgeMaskDirection.show()
+                self.ui.label_edgeDirection.show()
                 edges_image = self.sobelEdgeDetection(imageArray, selected_direction)
             elif selected_mask_type == "Prewitt":
+                self.ui.comboBox_edgeMaskDirection.show()
+                self.ui.label_edgeDirection.show()
                 edges_image = self.prewittEdgeDetection(imageArray, selected_direction)
             elif selected_mask_type == "Robert":
+                self.ui.comboBox_edgeMaskDirection.show()
+                self.ui.label_edgeDirection.show()
                 edges_image = self.robertEdgeDetection(imageArray, selected_direction)
             elif selected_mask_type == "Canny":
+                # Hide the direction comboBox & Label
+                self.ui.label_edgeDirection.hide()
+                self.ui.comboBox_edgeMaskDirection.hide()
                 edges_image = self.cannyEdgeDetection(imageArray)
+            else:
+                # Show the direction comboBox if it was hidden
+                self.ui.label_edgeDirection.show()
+                self.ui.comboBox_edgeMaskDirection.show()
+                return
 
             # Add the edges image to image_afterEdgeDetection
             self.ui.image_afterEdgeDetection.clear()
