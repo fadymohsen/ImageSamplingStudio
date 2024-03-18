@@ -15,6 +15,7 @@
         "kernal",
         "ksize",
         "meshgrid",
+        "MINMAX",
         "ndim",
         "prewitt",
         "pyqtgraph",
