@@ -11,6 +11,7 @@ from EdgeDetection import EdgeDetector
 from Thresholding import Thresholding 
 from curves import Curves
 from normalizeAndEqualize import ImageProcessor
+from frequency_domain_filters import FrequencyDomainFilters
 
 
 
@@ -40,6 +41,7 @@ class MyTabWidget(QTabWidget):
         self.addThresholdingAdd = Thresholding(self)
         self.addCurvesAdd = Curves(self)
         self.addEqualizeNormalize = ImageProcessor(self)
+        self.frequency_domain_filters = FrequencyDomainFilters(self)  
         
 
 
@@ -75,6 +77,8 @@ class MyTabWidget(QTabWidget):
             self.addCurvesAdd.drawCurves()
             # Apply in Normalization & Equalization
             self.addEqualizeNormalize.imageProcessing()
+            # Apply in frequency domain filters
+            self.frequency_domain_filters.apply_frequency_domain_filters()
 
 
 # -----------------------------------------------------------------------------------------------------------------
