@@ -1,51 +1,45 @@
-from PIL import Image
 import numpy as np
+import cv2
+import pyqtgraph as pg
 
-class ImageEqualizerAndNormalization:
-    def __init__(self, image_path):
-        self.image_path = image_path
-        self.image = Image.open(self.image_path)
-    
-    def histogram_equalization(self):
-        # Convert image to grayscale
-        gray_img = self.image.convert('L')
-        # Calculate histogram
-        histogram = np.bincount(np.array(gray_img).flatten(), minlength=256)
-        # Compute cumulative distribution function (CDF)
-        cdf = histogram.cumsum()
-        # Normalize the CDF
-        cdf_normalized = (cdf - cdf.min()) * 255 / (cdf.max() - cdf.min())
-        cdf_normalized = cdf_normalized.astype('uint8')
-        # Use the CDF to map the pixel intensities in the original image to new values
-        equalized_img = cdf_normalized[np.array(gray_img)]
-        # Convert back to an image
-        return Image.fromarray(equalized_img)
-    
-    def normalize_image(self, new_min=0, new_max=255):
-        # Convert image to numpy array
-        img_array = np.array(self.image)
-        # Calculate the min and max pixel values
-        old_min = img_array.min()
-        old_max = img_array.max()
-        # Apply normalization formula
-        normalized_array = (img_array - old_min) / (old_max - old_min) * (new_max - new_min) + new_min
-        # Clip values to the new_min and new_max
-        normalized_array = np.clip(normalized_array, new_min, new_max)
-        # Convert back to image
-        return Image.fromarray(normalized_array.astype('uint8'))
 
-    def save_image(self, img, output_path):
-        img.save(output_path)
-    
-    def process_and_save_images(self):
-        # Process the images
-        equalized_image = self.histogram_equalization()
-        normalized_image = self.normalize_image()
 
-        # Save the processed images
-        self.save_image(equalized_image, 'equalized_image.jpg')
-        self.save_image(normalized_image, 'normalized_image.jpg')
 
-# Usage
-image_processor = ImageEqualizerAndNormalization('path_to_your_image.jpg')
-image_processor.process_and_save_images()
+
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+class ImageProcessor:
+    def __init__(self, main_tab_widget):
+        self.main_tab_widget = main_tab_widget
+        self.ui = self.main_tab_widget
+        self.ui.eq_normal_combobox.activated.connect(self.imageProcessing)
+
+    def imageProcessing(self):
+        if self.main_tab_widget.selected_image_path:
+            imageArray = cv2.imread(self.main_tab_widget.selected_image_path)
+            if imageArray.ndim == 3:
+                imageArray = cv2.cvtColor(imageArray, cv2.COLOR_BGR2GRAY)
+            imageArray = cv2.rotate(imageArray, cv2.ROTATE_90_CLOCKWISE)
+            self.ui.image_beforeOperation.clear()
+            original_img_item = pg.ImageItem(imageArray)
+            original_view = self.ui.image_beforeOperation.addViewBox()
+            original_view.addItem(original_img_item)
+            self.original_image = imageArray
+
+
+
+    def updateDisplay(self, image):
+        # Clear existing items in the appropriate view box
+        view_box = self.ui.image_edges.addViewBox()
+        self.ui.image_edges.clear()
+        # Display the new image
+        img_item = pg.ImageItem(image)
+        view_box.addItem(img_item)

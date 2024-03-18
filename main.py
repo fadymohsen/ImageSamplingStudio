@@ -10,8 +10,7 @@ from NoiseFilter import noiseAdditionFiltration
 from EdgeDetection import EdgeDetector
 from Thresholding import Thresholding 
 from curves import Curves
-
-
+from normalizeAndEqualize import ImageProcessor
 
 
 
@@ -40,6 +39,7 @@ class MyTabWidget(QTabWidget):
         self.addDetectionAdd = EdgeDetector(self)
         self.addThresholdingAdd = Thresholding(self)
         self.addCurvesAdd = Curves(self)
+        self.addEqualizeNormalize = ImageProcessor(self)
         
 
 
@@ -73,6 +73,8 @@ class MyTabWidget(QTabWidget):
             self.addDetectionAdd.detectEdges()
             # Apply in curves
             self.addCurvesAdd.drawCurves()
+            # Apply in Normalization & Equalization
+            self.addEqualizeNormalize.imageProcessing()
 
 
 # -----------------------------------------------------------------------------------------------------------------
