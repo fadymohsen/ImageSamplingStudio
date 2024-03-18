@@ -4,6 +4,7 @@
         "arctan",
         "astype",
         "butterworth",
+        "cumsum",
         "dtype",
         "fftshift",
         "fillvalue",
@@ -17,6 +18,7 @@
         "ndim",
         "prewitt",
         "pyqtgraph",
+        "rint",
         "sobel",
         "thresholded",
         "Thresholding"
