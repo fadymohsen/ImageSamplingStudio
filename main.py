@@ -9,11 +9,10 @@ import numpy as np
 # Features
 from NoiseFilter import noiseAdditionFiltration
 from EdgeDetection import EdgeDetector
-
+from Thresholding import Thresholding 
 
 """
 import curves
-import Thresholding 
 import RGBHistogram
 from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
 """
@@ -40,11 +39,10 @@ class MyTabWidget(QTabWidget):
         self.selected_image_path = None
         self.pushButton_browseImage.clicked.connect(self.browse_image)
 
-        # NOISE-FILTERING
+        # Import Features Classes
         self.noiseAddFilterAdd = noiseAdditionFiltration(self)
-
-        # EDGE-DETECTION
         self.addDetectionAdd = EdgeDetector(self)
+        self.addThresholdingAdd = Thresholding(self)
         
 
 
