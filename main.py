@@ -10,6 +10,7 @@ import numpy as np
 from NoiseFilter import noiseAdditionFiltration
 from EdgeDetection import EdgeDetector
 from Thresholding import Thresholding 
+from curves import Curves
 
 """
 import curves
@@ -43,6 +44,7 @@ class MyTabWidget(QTabWidget):
         self.noiseAddFilterAdd = noiseAdditionFiltration(self)
         self.addDetectionAdd = EdgeDetector(self)
         self.addThresholdingAdd = Thresholding(self)
+        self.addCurvesAdd = Curves(self)
         
 
 
@@ -72,6 +74,9 @@ class MyTabWidget(QTabWidget):
             self.noiseAddFilterAdd.applyNoise()
             # Apply in EdgeDetection
             self.addDetectionAdd.detectEdges()
+            # Apply in curves
+            self.addCurvesAdd.drawCurves()
+
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
