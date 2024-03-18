@@ -6,14 +6,18 @@ import cv2
 import pyqtgraph as pg
 import numpy as np
 
-# Noise / Filtering
+# Features
 from NoiseFilter import noiseAdditionFiltration
+from EdgeDetection import EdgeDetector
 
+
+"""
 import curves
-import EdgeDetection
 import Thresholding 
 import RGBHistogram
 from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
+"""
+
 
 
 
@@ -32,19 +36,20 @@ class MyTabWidget(QTabWidget):
     def __init__(self, ui_file):
         super().__init__()
         uic.loadUi(ui_file, self)
+        self.image_edges = pg.GraphicsLayoutWidget()
         self.selected_image_path = None
         self.pushButton_browseImage.clicked.connect(self.browse_image)
 
         # NOISE-FILTERING
-        self.noiseAdd = noiseAdditionFiltration(self)
-        self.filter_types = {"Ideal":ideal_filter, "Butterworth":butterworth_filter, "Gaussian":gaussian_filter}
+        self.noiseAddFilterAdd = noiseAdditionFiltration(self)
+
+        # EDGE-DETECTION
+        self.addDetectionAdd = EdgeDetector(self)
+        
 
 
         # START - To be Edited
         """
-        self.edgeDetectionDirection = "Horizontal"
-        self.currentTypeIndex = 0
-        self.handleObjects()
         self.vb = None
         self.image_mixed = False
         self.img_data_low_pass = None
@@ -58,9 +63,6 @@ class MyTabWidget(QTabWidget):
 # -----------------------------------------------------------------------------------------------------------------
 
     def browse_image(self):
-        """
-        Importing the MAIN Image in the first Tab Widget to be imported in the following Tab Widgets.
-        """
         options = QFileDialog.Options()
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Image", "",
                                                 "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
@@ -69,20 +71,14 @@ class MyTabWidget(QTabWidget):
             self.selected_image_path = file_name
             self.display_image_on_graphics_layout(file_name)
             # Apply in Noise/Filtering
-            self.noiseAdd.applyNoise()
+            self.noiseAddFilterAdd.applyNoise()
+            # Apply in EdgeDetection
+            self.addDetectionAdd.detectEdges()
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
 
     def display_image_on_graphics_layout(self, image_path):
-        """
-        Displays a grayscale image on the GraphicsLayoutWidget after rotating it by 90 degrees counterclockwise.
-        Args:
-            image_path (str): The file path of the image to be displayed.
-        This function reads the image from the specified path, converts it to grayscale.
-        Rotates it by 90 degrees counterclockwise,
-        and then displays it on the GraphicsLayoutWidget. The view is adjusted to fit the image.
-        """
         image_data = cv2.imread(image_path)
         image_data = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
         image_data = np.rot90(image_data, -1)
@@ -111,7 +107,8 @@ class MyTabWidget(QTabWidget):
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
 
-    """
+
+""" 
     def handleObjects(self):
         self.btn_chooseImageCurves_2.clicked.connect(self.open_image)
         #self.btn_chooseImageNoise_2.clicked.connect(lambda: self.noiseAdd.Browse())
@@ -155,7 +152,8 @@ class MyTabWidget(QTabWidget):
         self.image_mixed = True
         self.open_image()
 
-    def open_image(self):
+
+def open_image(self):
         options = QFileDialog.Options()
         fileName, _ = QFileDialog.getOpenFileName(self, "Select Image", "",
                                                   "Image Files (*.png *.jpg *.jpeg *.bmp *.gif *.webp)",
@@ -184,16 +182,26 @@ class MyTabWidget(QTabWidget):
         self.checkMaskType()
 
     def checkMaskType(self):
+        detector = EdgeDetector(self)  # Create an instance of EdgeDetector
+
+        # Display the original image before edge detection
+        self.showFinalImage(self.image_beforeEdgeDetection)
+
         if self.currentTypeIndex == 0:
-            img = EdgeDetection.sobelEdgeDetection(self.grayScaleImage, self.edgeDetectionDirection)
+            img = detector.sobelEdgeDetection(self.image, self.edgeDetectionDirection)
         elif self.currentTypeIndex == 1:
-            img = EdgeDetection.prewittEdgeDetection(self.grayScaleImage, self.edgeDetectionDirection)
+            img = detector.prewittEdgeDetection(self.image, self.edgeDetectionDirection)
         elif self.currentTypeIndex == 2:
-            img = EdgeDetection.robertEdgeDetection(self.grayScaleImage, self.edgeDetectionDirection)
+            img = detector.robertEdgeDetection(self.image, self.edgeDetectionDirection)
         else:
-            img = EdgeDetection.cannyEdgeDetection(self.grayScaleImage)
+            img = detector.cannyEdgeDetection(self.image)
         
         self.showFinalImage(img)
+
+
+
+
+
 
 
     def on_edgeMaskDirection_change(self, index):
@@ -320,15 +328,16 @@ class MyTabWidget(QTabWidget):
             # Neither radio button is checked
             self.image_afterThresholding.clear()
             pass
+
 """
+    
     
 
 
 def main():
     app = QApplication(sys.argv)
     window = MyTabWidget("MainWindow.ui")
-    window.showFullScreen()                         # Show in full screen
-
+    window.showFullScreen()
     window.show()
     sys.exit(app.exec_())
 
