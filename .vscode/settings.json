@@ -1,6 +1,7 @@
 {
     "python.analysis.typeCheckingMode": "basic",
     "cSpell.words": [
+        "arctan",
         "astype",
         "butterworth",
         "dtype",
@@ -11,6 +12,7 @@
         "ifftshift",
         "imread",
         "kernal",
+        "ksize",
         "meshgrid",
         "ndim",
         "prewitt",
