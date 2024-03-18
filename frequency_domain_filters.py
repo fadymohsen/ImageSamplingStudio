@@ -52,7 +52,7 @@ class FrequencyDomainFilters:
         self.mainWindow.btn_applyHybrid.clicked.connect(
             lambda:self.mix_images(self.img_data_low_pass,self.img_data_high_pass))
     def updateFrequencyValue(self, value):
-        # self.mainWindow.label_frequencyValue.setText('Cut-off Frequency: {} Hz'.format(value))
+        self.mainWindow.label_frequencyValue.setText('Cut-off Frequency: {} Hz'.format(value))
         self.freq_domain_filters( self.mainWindow.radioButton_lowPass.isChecked()
                                  ,  self.mainWindow.comboBox_filterType.currentText())
     def updateTValue(self, value):
