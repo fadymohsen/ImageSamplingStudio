@@ -18,6 +18,7 @@
         "prewitt",
         "pyqtgraph",
         "sobel",
+        "thresholded",
         "Thresholding"
     ]
 }
