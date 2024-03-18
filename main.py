@@ -1,5 +1,4 @@
 import sys
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QTabWidget, QFileDialog
 from PyQt5 import uic
 import cv2
@@ -12,11 +11,7 @@ from EdgeDetection import EdgeDetector
 from Thresholding import Thresholding 
 from curves import Curves
 
-"""
-import curves
-import RGBHistogram
-from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
-"""
+
 
 
 
@@ -50,6 +45,8 @@ class MyTabWidget(QTabWidget):
 
         # START - To be Edited
         """
+        import RGBHistogram
+        from frequency_domain_filters import ideal_filter, butterworth_filter, gaussian_filter, hyprid_images
         self.vb = None
         self.image_mixed = False
         self.img_data_low_pass = None
@@ -331,10 +328,12 @@ def open_image(self):
             # Neither radio button is checked
             self.image_afterThresholding.clear()
             pass
-
 """
     
     
+
+
+
 
 
 def main():

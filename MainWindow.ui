@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>3</number>
+   <number>4</number>
   </property>
   <widget class="QWidget" name="tab_6">
    <attribute name="title">
@@ -2291,7 +2291,7 @@ QTabBar::tab:selected {
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>20</height>
+          <height>40</height>
          </size>
         </property>
        </spacer>
@@ -2325,77 +2325,54 @@ QTabBar::tab:selected {
           <property name="font">
            <font>
             <family>Georgia</family>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
             <bold>true</bold>
            </font>
           </property>
           <property name="text">
            <string>Choose an Operation:</string>
           </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="radioButton_normalization">
-          <property name="minimumSize">
-           <size>
-            <width>170</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Georgia</family>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QRadioButton::indicator:checked {
-    background-color: green;
-border-radius: 8px;
-}</string>
-          </property>
-          <property name="text">
-           <string>Normalization</string>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_equalization">
-          <property name="minimumSize">
+         <spacer name="horizontalSpacer_39">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>170</width>
-            <height>50</height>
+            <width>45</width>
+            <height>20</height>
            </size>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>150</width>
-            <height>50</height>
-           </size>
-          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
           <property name="font">
            <font>
             <family>Georgia</family>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
+            <pointsize>16</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
            </font>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QRadioButton::indicator:checked {
-    background-color: green;
-border-radius: 8px;
-}</string>
-          </property>
-          <property name="text">
-           <string>Equalization</string>
-          </property>
+          <item>
+           <property name="text">
+            <string>Equalization</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Normalization</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>
@@ -2468,7 +2445,7 @@ border-radius: 8px;
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -2575,7 +2552,7 @@ border-radius: 8px;
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -2686,7 +2663,7 @@ border-radius: 8px;
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
@@ -2793,7 +2770,7 @@ border-radius: 8px;
               <property name="font">
                <font>
                 <family>Georgia</family>
-                <pointsize>10</pointsize>
+                <pointsize>16</pointsize>
                 <bold>true</bold>
                </font>
               </property>
