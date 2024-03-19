@@ -1,27 +1,36 @@
 {
     "python.analysis.typeCheckingMode": "basic",
     "cSpell.words": [
+        "arange",
         "arctan",
         "astype",
         "butterworth",
         "cumsum",
         "dtype",
+        "Fady",
         "fftshift",
         "fillvalue",
         "hyprid",
+        "Ibrahim",
         "ifft",
         "ifftshift",
         "imread",
         "kernal",
         "ksize",
+        "Lamees",
+        "Marwan",
         "meshgrid",
         "MINMAX",
+        "Mohamad",
+        "Mohsen",
         "ndim",
         "prewitt",
         "pyqtgraph",
+        "Rana",
         "rint",
         "sobel",
         "thresholded",
-        "Thresholding"
+        "Thresholding",
+        "Zakarya"
     ]
 }
