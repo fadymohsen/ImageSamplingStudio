@@ -6,13 +6,13 @@ import pyqtgraph as pg
 import numpy as np
 
 # Features
-from NoiseFilter import noiseAdditionFiltration
-from EdgeDetection import EdgeDetector
-from Thresholding import Thresholding 
-from curves import Curves
-from normalizeAndEqualize import ImageProcessor
-from frequency_domain_filters import FrequencyDomainFilters
-from RGBHistogram import RGBHistograms
+from features.NoiseFilter import noiseAdditionFiltration
+from features.EdgeDetection import EdgeDetector
+from features.Thresholding import Thresholding 
+from features.curves import Curves
+from features.normalizeAndEqualize import ImageProcessor
+from features.frequency_domain_filters import FrequencyDomainFilters
+from features.RGBHistogram import RGBHistograms
 
 
 

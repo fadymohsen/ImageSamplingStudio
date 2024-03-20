@@ -1,8 +1,4 @@
-Here's a professional README template for your teacher assistant:
-
----
-
-# Image Processing Studio
+# Computer Vision - Image Processing Studio
 
 ## Description
 
@@ -54,3 +50,7 @@ python main.py
 - Lama Zakarya
 - Camelia Marwan
 - Rana Ibrahim
+
+
+## Acknowledgments
+We would like to express our gratitude to Dr. Ahmed Badawi for his guidance and support throughout this project.

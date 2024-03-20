@@ -16,7 +16,7 @@ class Thresholding:
         self.readImage()
         self.ui.slider_adjustTValue.setRange(0, 255)  
         self.ui.slider_adjustTValue.setValue(127)  
-        self.ui.slider_adjustTValue.valueChanged.connect(self.updateThreshold)
+        self.ui.slider_adjustTValue.sliderReleased.connect(self.updateThreshold)
         self.ui.radioButton_globalThresholding.toggled.connect(self.displayImagesThreshold)
         self.ui.radioButton_localThresholding.toggled.connect(self.displayImagesThreshold)
         

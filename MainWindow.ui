@@ -603,7 +603,7 @@ QTabBar::tab:selected {
 </string>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="tab_6">
    <attribute name="title">
@@ -1054,7 +1054,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseTypes">
                 <property name="minimumSize">
                  <size>
-                  <width>116</width>
+                  <width>104</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1308,7 +1308,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_noiseFilters">
                 <property name="minimumSize">
                  <size>
-                  <width>116</width>
+                  <width>104</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1623,7 +1623,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_edgeMaskType">
                 <property name="minimumSize">
                  <size>
-                  <width>116</width>
+                  <width>104</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -1716,7 +1716,7 @@ QTabBar::tab:selected {
                <widget class="QComboBox" name="comboBox_edgeMaskDirection">
                 <property name="minimumSize">
                  <size>
-                  <width>116</width>
+                  <width>104</width>
                   <height>50</height>
                  </size>
                 </property>
@@ -4324,22 +4324,6 @@ border-radius: 8px;
                 </item>
                </layout>
               </item>
-              <item>
-               <spacer name="verticalSpacer_52">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Preferred</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
              </layout>
             </item>
             <item>
@@ -4461,12 +4445,12 @@ border-radius: 8px;
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Preferred</enum>
+             <enum>QSizePolicy::Fixed</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>80</height>
+              <height>10</height>
              </size>
             </property>
            </spacer>
@@ -4537,22 +4521,6 @@ border-radius: 8px;
                </widget>
               </item>
              </layout>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_53">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_39">
@@ -4642,23 +4610,6 @@ border-radius: 8px;
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_71">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>10</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_52">
-                <item>
                  <widget class="QPushButton" name="btn_addFirstImage">
                   <property name="font">
                    <font>
@@ -4678,35 +4629,19 @@ color:#0074D9;</string>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_91">
+                 <spacer name="horizontalSpacer_71">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
                     <width>40</width>
-                    <height>20</height>
+                    <height>10</height>
                    </size>
                   </property>
                  </spacer>
                 </item>
                </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_48">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>5</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
               <item>
                <widget class="GraphicsLayoutWidget" name="image_lowPass" native="true">
@@ -4888,23 +4823,6 @@ color:#0074D9;</string>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_73">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>10</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_53">
-                <item>
                  <widget class="QPushButton" name="btn_addSecondImage">
                   <property name="font">
                    <font>
@@ -4924,14 +4842,14 @@ color: #0074D9;</string>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="horizontalSpacer_92">
+                 <spacer name="horizontalSpacer_73">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
                     <width>40</width>
-                    <height>20</height>
+                    <height>10</height>
                    </size>
                   </property>
                  </spacer>
@@ -4939,20 +4857,7 @@ color: #0074D9;</string>
                </layout>
               </item>
               <item>
-               <spacer name="verticalSpacer_49">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>5</height>
-                 </size>
-                </property>
-               </spacer>
+               <layout class="QHBoxLayout" name="horizontalLayout_53"/>
               </item>
               <item>
                <widget class="GraphicsLayoutWidget" name="image_highPass" native="true">
@@ -4999,10 +4904,13 @@ color: #0074D9;</string>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
         <property name="sizeHint" stdset="0">
          <size>
           <width>1583</width>
-          <height>13</height>
+          <height>30</height>
          </size>
         </property>
        </spacer>
