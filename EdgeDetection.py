@@ -89,44 +89,61 @@ class EdgeDetector:
 # -----------------------------------------------------------------------------------------------------------------
 
     def sobelEdgeDetection(self, image, direction):
+        sobelFilterVertical = np.array([[-1, 0, 1],
+                                [-2, 0, 2],
+                                [-1, 0, 1]])
+        sobelFilterHorizontal = np.array([[-1, -2, -1],
+                                [0, 0, 0],
+                                [1, 2, 1]])
         if direction == "Vertical":
-            sobelFilter = np.array([[-1, 0, 1],
-                                    [-2, 0, 2],
-                                    [-1, 0, 1]])
+            sobelEdgeDetectedImage = cv2.filter2D(image, -1, sobelFilterVertical)
+        elif direction == "Horizontal":
+            sobelEdgeDetectedImage = cv2.filter2D(image, -1, sobelFilterHorizontal)
         else:
-            sobelFilter = np.array([[-1, -2, -1],
-                                    [0, 0, 0],
-                                    [1, 2, 1]])
+            verticalOutput = cv2.filter2D(image, -1, sobelFilterVertical)
+            horizontalOutput = cv2.filter2D(image, -1, sobelFilterHorizontal)
+            sobelEdgeDetectedImage = np.hypot(verticalOutput, horizontalOutput)
         
-        sobelEdgeDetectedImage = cv2.filter2D(image, -1, sobelFilter)
         return sobelEdgeDetectedImage
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
 
     def prewittEdgeDetection(self, image, direction):
+        prewittFilterVertical = np.array([[-1, 0, 1],
+                                          [-1, 0, 1],
+                                          [-1, 0, 1]])
+        prewittFilterHorizontal = np.array([[1, 1, 1],
+                                            [0, 0, 0],
+                                            [-1, -1, -1]])
         if direction == "Vertical":
-            prewittFilter = np.array([[-1, 0, 1],
-                                    [-1, 0, 1],
-                                    [-1, 0, 1]])
+            prewittEdgeDetectedImage = cv2.filter2D(image, -1, prewittFilterVertical)
+        elif direction == "Horizontal":
+            prewittEdgeDetectedImage = cv2.filter2D(image, -1, prewittFilterHorizontal)
         else:
-            prewittFilter = np.array([[1, 1, 1],
-                                    [0, 0, 0],
-                                    [-1, -1, -1]])
-        prewittEdgeDetectedImage = cv2.filter2D(image, -1, prewittFilter)
+            verticalOutput = cv2.filter2D(image, -1, prewittFilterVertical)
+            horizontalOutput = cv2.filter2D(image, -1, prewittFilterHorizontal)
+            prewittEdgeDetectedImage = np.hypot(verticalOutput, horizontalOutput)
+        
         return prewittEdgeDetectedImage
 
 # -----------------------------------------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------------------------
 
     def robertEdgeDetection(self, image, direction):
-        if direction == "Vertical":
-            robertFilter = np.array([[1, 0],
+        robertFilterVertical = np.array([[1, 0],
                                     [0, -1]])
-        else:
-            robertFilter = np.array([[0, 1],
+        robertFilterHorizontal = np.array([[0, 1],
                                     [-1, 0]])
-        robertEdgeDetectedImage = cv2.filter2D(image, -1, robertFilter)
+        if direction == "Vertical":
+            robertEdgeDetectedImage = cv2.filter2D(image, -1, robertFilterVertical)
+        elif direction == "Horizontal":
+            robertEdgeDetectedImage = cv2.filter2D(image, -1, robertFilterHorizontal)
+        else:
+            verticalOutput = cv2.filter2D(image, -1, robertFilterVertical)
+            horizontalOutput = cv2.filter2D(image, -1, robertFilterHorizontal)
+            robertEdgeDetectedImage = np.hypot(verticalOutput, horizontalOutput)
+
         return robertEdgeDetectedImage
 
 # -----------------------------------------------------------------------------------------------------------------
