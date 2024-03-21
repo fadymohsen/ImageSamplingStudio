@@ -9,6 +9,10 @@ Image Processing Studio is a comprehensive application developed using PyQt5 for
 
 
 ## Features
+- **Browse User Interface:** The first step is adding a new image through this UI.
+  ![Noise Addition and Filteration](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Browse%20-%20Before%20Adding.png)
+- **Edge Detection:** Implement multiple edge detection algorithms to highlight the edges in images.
+  ![Edge Detection](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Edge%20Detection.png)
 - **Noise Addition and Filtration:** Add various types of noise to images and apply different filters to reduce noise.
   ![Noise Addition and Filteration](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Noise%20Filteration.png)
 - **Edge Detection:** Implement multiple edge detection algorithms to highlight the edges in images.
