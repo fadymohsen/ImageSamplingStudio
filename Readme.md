@@ -10,12 +10,20 @@ Image Processing Studio is a comprehensive application developed using PyQt5 for
 
 ## Features
 - **Noise Addition and Filtration:** Add various types of noise to images and apply different filters to reduce noise.
+  ![Noise Addition and Filteration](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Noise%20Filteration.png)
 - **Edge Detection:** Implement multiple edge detection algorithms to highlight the edges in images.
+  ![Edge Detection](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Edge%20Detection.png)
+- **Curves:** Analyze and plot Histogram and Distribution Curve.
+  ![Curves](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Curves.png)
 - **Thresholding:** Apply global and local thresholding techniques to segment images.
-- **Curves:** Adjust the brightness and contrast of images using curve manipulation.
-- **Normalization and Equalization:** Normalize and equalize the histogram of images for better contrast.
-- **Frequency Domain Filters:** Apply filters in the frequency domain to enhance or suppress certain features of images.
+  ![Thresholding](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Global%20Thresholding.png)
 - **RGB Histograms:** Analyze and plot the RGB histograms of images.
+  ![Frequency Domain Filters](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/RGB%20Histogram.png)
+- **Normalization and Equalization:** Normalize and equalize the histogram of images for better contrast.
+  ![Normalization and Equalization](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Equalization.png)
+- **Frequency Domain Filters:** Apply filters in the frequency domain to enhance or suppress certain features of images.
+  ![Frequency Domain Filters](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Frequency.png)
+
 <br>
 
 
