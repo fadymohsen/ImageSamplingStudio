@@ -1,4 +1,4 @@
-# Computer Vision - Image Processing Studio
+# Image Processing Studio
 
 
 
