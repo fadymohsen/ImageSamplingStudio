@@ -12,21 +12,21 @@ Image Processing Studio is a comprehensive application developed using PyQt5 for
 - **Browse User Interface:** The first step is adding a new image through this UI.
   ![Browse - Before Adding](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Browse%20-%20Before%20Adding.png)
 - **After Adding an Image:** It will be automatically uploaded to the next tab widgets for all features (for better user experience).
-  ![Browse - After Adding](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Browse%20-%20After%20Adding.png)
+  ![Browse - After Adding](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Browse%20-%20After%20Adding.png)
 - **Noise Addition and Filtration:** Add various types of noise to images and apply different filters to reduce noise.
-  ![Noise Addition and Filteration](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Noise%20Filteration.png)
+  ![Noise Addition and Filteration](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Noise%20Filteration.png)
 - **Edge Detection:** Implement multiple edge detection algorithms to highlight the edges in images.
-  ![Edge Detection](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Edge%20Detection.png)
+  ![Edge Detection](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Edge%20Detection.png)
 - **Curves:** Analyze and plot Histogram and Distribution Curve.
-  ![Curves](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Curves.png)
+  ![Curves](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Curves.png)
 - **Thresholding:** Apply global and local thresholding techniques to segment images.
-  ![Thresholding](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Global%20Thresholding.png)
+  ![Thresholding](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Global%20Thresholding.png)
 - **RGB Histograms:** Analyze and plot the RGB histograms of images.
-  ![Frequency Domain Filters](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/RGB%20Histogram.png)
+  ![Frequency Domain Filters](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/RGB%20Histogram.png)
 - **Normalization and Equalization:** Normalize and equalize the histogram of images for better contrast.
-  ![Normalization and Equalization](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Equalization.png)
+  ![Normalization and Equalization](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Equalization.png)
 - **Frequency Domain Filters:** Apply filters in the frequency domain to enhance or suppress certain features of images.
-  ![Frequency Domain Filters](https://github.com/fadymohsen/ComputerVision-ImageSamplingStudio/blob/main/Screenshots/Frequency.png)
+  ![Frequency Domain Filters](https://github.com/fadymohsen/ImageSamplingStudio/blob/main/Screenshots/Frequency.png)
 
 <br>
 
